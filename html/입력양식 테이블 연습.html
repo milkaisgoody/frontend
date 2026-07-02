@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식 및 테이블 연습</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <!--<legend>예약정보</legend>-->
+            <h1>예약정보</h1>
+            이름 <input type="text" name="name"><br>
+            <p></p>
+            전화 <input type="text" name="phone"><br>
+            <p></p>
+            이메일 <input type="text" name="email"><br>
+            <p></p>
+            
+            <input type="submit" value="예약하기">
+        </fieldset>
+    </form>
+
+    <table  border = "1" width="100%" height="500">
+        <colgroup>
+            <col width = "25%">
+            <col width = "25%">
+            <col width = "25%">
+            <col width = "25%">
+        </colgroup>
+
+        <caption>이력서</caption>
+        <tr>
+            <td colspan="2" rowspan="2" width="30%">
+                <img src="/html/img/pf.jpg" alt="이력서 이미지">
+            </td>
+            <td>이름</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>연락처</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>주소</td>
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td>자기소개</td>
+            <td colspan="3"></td>
+        </tr>
+
+    </table>
+</body>
+</html>
