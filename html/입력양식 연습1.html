@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식 연습 1</title>
+    <style>
+        #reservation{
+            width: 450px;
+            height: 250px;
+        }
+
+        label{
+            display: inline-block; 
+            width: 50px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <form action="loginAction.html">
+        <fieldset id="reservation">
+            <h1>예약정보</h1>
+
+            <label for="name">이름</label>
+            <input type="text" id="name" required><br>
+            <p></p>
+            <label for=phone">전화</label>
+            <input type="tel" name="" id="phone" required><br>
+            <p></p>
+            <label for="email">이메일</label>
+            <input type="email" name="" id="email" required><br>
+            <p></p>
+
+            <input type="submit" value="예약하기">
+        </fieldset>
+    </form>
+
+
+</body>
+</html>
