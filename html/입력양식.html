@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식</title>
+    <style>
+        /* 
+        선택자를 이용해서 요소를 선택하고 중괄호 안에 스타일을 정의한다.
+        선택자 : 요소를 선택하는 역할
+                #아이디 
+        선택자 {
+            속성 : 값;
+            속성 : 값;
+            width : 30px;
+            height : 20px;        
+        }
+        
+        */
+        #number {
+            width: 300px;
+            height: 200px;
+        }
+
+        label{
+            /* label에 속한 요소들의 속성 값을 inline-block으로 변경해줌, 이걸 안하면 width값 적용이 안됨 */
+            display: inline-block; 
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>입력양식</h1>
+    <!--
+        form : 서버에 데이터를 전달 하기 위해서 사용
+        -속성
+        action : 요청하려는 페이지의 주소
+        method: 요청 방식 (get, post)
+        name : 자바스크립트로 폼을 제어하기 위해, 서버에 데이터 넘기고 싶을때 사용
+        target : 페이지를 어디에 열건지 (현재페이지에 열건지, 새로운 창으로 열건지)
+    -->
+    <form action="loginAction.html" method="get" name="loginForm" target="_self">
+       id : <input type="text" name="id" minlength="4" maxlength="12" required><br>
+       아이디는 4자이상 12자 이하로 작성 가능합니다. <br>
+       pw : <input type="password" name="pw"><br>
+       
+       <!--버튼의 종류-->
+       <input type="button" value="로그인">
+       <!--
+            form 태그의 action 속성을 서버에 요청
+            method 속성에 정의된 방식으로 (만약 지정하지 않았다면 기본값인 get 방식)
+
+            프로토콜 (통신규약) : http://
+            ip                :  127.0.0.1
+            port              :   :5500
+            경로              :   /html/loginAction.html
+            쿼리스트링         :    ?id=1234&pw=1234
+                                    name 속성의 값 = 입력필드에 입력된 값
+            데이터가 넘어가지 않는 경우
+            -name 속성이 있는지
+            -form 태그로 감싸져 있는지 확인
+       -->
+       <input type="submit" value="서브밋">
+       <input type="reset" value="리셋">
+    
+    </form>
+    <hr>
+    <h1>입력양식의 종류</h1>
+    <form action="loginAction.html">
+
+        <fieldset>
+            <legend>텍스트 입력양식</legend>
+            
+            <!--
+                label - 폼 요소에 이름을 붙일 때 사용
+                for 속성을 이용해서 요소와 연결
+                for = "요소의 아이디"
+
+                레이블을 선택하면 입력요소의 커서가 들어간다.           
+            -->
+
+            <label for="test">text</label><!--라벨 사용 방법 1-->
+            <input id="test" type="text" value="텍스트입력" placeholder="아이디를 입력해주세요"><br>
+
+            <!--
+            value : 실제로 입력된 내용 (submit 버튼을 눌렀을 때 실제로 서버로 넘어가는 내용)
+            placeholder : 입력칸이 비어있을때 힌트를 표시해 주기위해 사용, value값이 있으면 value값이 우선적으로 사용된다. 
+            
+            -->
+            <label for="test1">password</label>
+            <input type="password" name="" id="test1" placeholder="비밀번호를 입력해주세요."><br>
+            <!--입력창에 x버튼을 출력-->
+            <label for="test2">search</label>
+            <input type="search" name="" id="test2"><br>
+            <!-- http://, https://가 있는지 체크-->
+            <label for="test3">url</label>
+            <input type="url" name="" id="test3"><br>
+            <!--이메일 형식 체크-->
+            <label for="test4">email</label>
+            <input type="email" name="" id="test4"><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>체크박스/라디오버튼</legend>
+            checkbox - 취미<br>
+            <!--
+                name 속성으로 묶어주고
+                선택된 value 속성의 값이 서버에 전달
+                체크박스 - 다중선택 (name으로 묶인 그룹에서 여러개의 항목을 선택)
+                라디오버튼 - 단일선택 (name으로 묶인 그룹에서 하나의 항목을 선택)       
+            -->
+            <input type="checkbox" name="hobby" id="" value="1">축구
+            <input type="checkbox" name="hobby" id="" value="2">농구
+            <input type="checkbox" name="hobby" id="" value="3">배구
+            <input type="checkbox" name="hobby" id="" value="4">야구
+    
+            <br>
+            radio - 성별<br>
+            <input type="radio" name="gender" value="1" id="">남
+            <input type="radio" name="gender" value="2" id="">여
+            <input type="radio" name="test" value="3" id="">비밀
+        </fieldset>
+        <hr>
+
+        <br>
+        number<input type="number" name="" id="number" min="1" max="100" step="10" style="width:20px">
+        
+        <hr>
+        <input type="submit" value="회원가입">
+    </form>
+</body>
+</html>
