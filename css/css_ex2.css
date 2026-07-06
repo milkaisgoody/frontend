@@ -1,0 +1,29 @@
+/* 태그 선택자
+블럭 요소 - 한줄을 몽땅 차지하는 요소
+인라인 요소 - 컨텐츠가 가지고 있는 영역만큼만 차지하는 요소
+inline : 컨텐츠만큼만 영역 차지 ex)display: inline;
+
+*/
+
+
+
+/* div{
+    border: 1px solid;
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+} */
+
+.title{
+    background-color: blue;
+    color: aliceblue;
+    display: inline;
+    width: 200px;
+}
+
+
+.accent{
+    color: red;
+    font-weight: 700;
+}
