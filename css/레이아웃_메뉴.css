@@ -75,6 +75,7 @@ body{
     padding-left: 10px;
     /*visibility: hidden도 가능*/
     display: none;
+    z-index: 999; 
 }
 
 /*요소를 여러개 선택해서 스타일을 적용
