@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+.badge{
+        /* 
+            position 속성
+            static (기본값 - 문서의 흐름대로 출력, 위치값 지정 안됨)
+            relative - 부모상자, 위치값
+            absolute - 부모를 기준으로 배치 (부모가 없다면 body를 기준으로 배치됨)
+            fixed - 고정배치
+        */
+
+        /*기준이 되는 상자로 만듦 -relative*/
+        position: relative;
+        /* top: 100px;
+        left: 100px; */
+
+        border: none;
+        padding: 10px 20px;
+    }
+.badge_img{
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px;           
+    /* 기준이 되는 상자로부터 위치를 잡음, 부모를 기준으로 위치이동 - absolute */
+    position: absolute; 
+    top: -15px;
+    right: -15px;
+    /* bottom: ; */
+    /* left: ; */
+}
+
+.fixedbox{
+    position: fixed; /*위치 고정*/
+    top: 10px;
+    right: 10px;
+    background-color: blue;
+    z-index: 999; /*위치를 조정할 수 있는 요소만 가능 - 우선순위 높아짐*/
+}
+
+body{
+    height: 200vh; /*스크롤 생성*/
+}
+
+/*
+    메뉴 만들기
+*/
+
+.menu{
+    display: flex;
+}
+.menu_item{
+    position: relative;
+    /*상하는 0px 좌우는 10px*/
+    padding: 0px 10px; 
+    /*height와 line-height를 똑같이 맞춰주면 가운데 정렬됨*/
+    height: 40px;
+    line-height: 40px; 
+    /*background-color: beige;*/
+}
+.submenu{
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 100px;
+    background-color: bisque;
+    padding-left: 10px;
+    /*visibility: hidden도 가능*/
+    display: none;
+}
+
+/*요소를 여러개 선택해서 스타일을 적용
+    hover: 요소에 마우스가 올라온 상태
+
+    공백
+    > 
+*/
+.menu_item:hover > .submenu, .menu_item:hover{
+    background-color: blanchedalmond;
+    display: block;
+}
+
+/*.menu_item:hover{
+    font-weight: 700;
+    font-size: 2rem;
+}*/
+
+/*
+    carousel
+*/
+.carousel{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    /*overflow: hidden;*/
+}
+.carousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel button{
+    position: absolute;
+    border: none;
+    /*투명도 0(투명) ~1(불투명)*/
+    opacity: 0.5;
+    height: 100%;
+    font-weight: 800;
+    color: #555;
+}
+.carousel button:first-of-type{
+    top: 0px;
+    left: 0px;
+}
+.carousel button:last-of-type{
+    top: 0px;
+    right: 0px;
+}
+
