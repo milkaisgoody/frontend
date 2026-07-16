@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>배열</h1>
     <script>
@@ -15,7 +17,7 @@
         const titles = ["도시의 밤", "파랑의 계절", "스텔라 오디세이"];
         console.log(titles);
         // 반복문 안에 있는 데이터의 값을 출력하기 위해서 반복문을 이용한다.
-        for(let i=0; i<titles.length; i++){
+        for (let i = 0; i < titles.length; i++) {
             // 배열의 방의 데이터 읽어오기
             console.log(titles[i])
         }
@@ -29,7 +31,7 @@
         console.log(titles[4]);
 
         // new Array()를 사용해서 배열을 만드는 방법
-        const arr1 = new Array(1,2,3);
+        const arr1 = new Array(1, 2, 3);
         console.log(arr1);
 
     </script>
@@ -50,7 +52,7 @@
                 함수명(값, 값);
         */
 
-        function print(){
+        function print() {
             console.log(`print`);
         }
 
@@ -60,15 +62,15 @@
 
         // 매개변수는 있고 반환(return)이 없는 함수
         //함수의 실행 결과 undifined가 반환됨
-        function print1(msg){
+        function print1(msg) {
             console.log(msg);
         }
 
         let arrow_print1 = msg => console.log(msg);
 
         //두개의 수를 입력받아서 두수의 합을 반환하는 함수
-        function add(i, j){
-            return i + j;           
+        function add(i, j) {
+            return i + j;
         }
 
         // 익명의 화살표 함수 만드는 방법 (매개변수 2개)
@@ -76,7 +78,7 @@
 
         // 배열메서드 - 배열자체를 변경, 반환만 하는경우
         // 함수의 실행결과 반환값을 재사용하기 위해서 변수에 저장했다 다시 사용
-        let res = add(1,2);
+        let res = add(1, 2);
         console.log(res);
 
         /*
@@ -86,20 +88,20 @@
         */
 
         // 익명의 함수를 변수에 저장
-       let greet = function(name){
+        let greet = function (name) {
             console.log(`${name}님 반가워요!`);
-       }
+        }
 
         //변수에 저장된 익명의 함수를 실행하는 방법
         // 변수의 이름을 불러줌() 
         greet();
-        greet("정원"); 
+        greet("정원");
 
         // 2개의 수를 입력 받아서 두수의 합을 반환하는 함수
         // 타입을 확인해서 숫자가 아니라면 '숫자를 입력해주세요'
         // 함수명 add2
-        function add2(num1, num2){
-            if(typeof(num1) != 'number' || typeof(num2) != 'number'){
+        function add2(num1, num2) {
+            if (typeof (num1) != 'number' || typeof (num2) != 'number') {
                 return '숫자를 입력해주세요';
             }
             return num1 + num2;
@@ -108,30 +110,34 @@
         //함수 : 기능을 정의해놓고 반복적으로 사용하기 위해
         // 외부로부터 어떤 값을 받아서 처리후 반환하는 
         // 선언적 함수
-        function welcome1(){
+        function welcome1() {
             console.log("무비 컬렉션에 오신 것을 환영합니다.");
             //화면에 있는 요소를 선택
             let box = document.querySelector(".box");
             // 요소의 컨텐츠를 변경
             // += : 기존 컨텐츠를 남기고 이어서 작성
             // = : 기존 컨텐츠를 지우고 작성
-            box.innerText="무비 컬렉션에 오신 것을 환영합니다.";
+            box.innerText = "무비 컬렉션에 오신 것을 환영합니다.";
         }
         // 익명의 함수(변수, 매개변수로 전달(콜백🌝))
-        let welcome2 = function(){
-            console.log("무비 컬렉션에 오신 것을 환영합니다.");            
+        let welcome2 = function () {
+            console.log("무비 컬렉션에 오신 것을 환영합니다.");
         }
-        
+
         //익명의 화살표 함수
         let welcome3 = () => {
-            console.log("무비 컬렉션에 오신 것을 환영합니다.");            
+            console.log("무비 컬렉션에 오신 것을 환영합니다.");
         }
 
         // 박스를 선택
         // 박스.innerText = 값
 
+        // 공공데이터포털 회원가입
+        // 영화사 검색 > 한국영상자료원_영화정보 DB API Key 신청
+
     </script>
 
     <div class="box"></div>
 </body>
+
 </html>
